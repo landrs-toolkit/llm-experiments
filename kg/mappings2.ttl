@@ -1,0 +1,118 @@
+
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix co2: <http://example.com/co2#> .
+
+co2:CO2Measurement
+    rr:logicalTable [
+        rml:source "CO2Meter_GPS_iso.csv";
+    ];
+
+    rr:subjectMap [
+        rr:template "http://example.com/co2/CO2_PPM_/{id}";
+        rr:class co2:CO2_PPM_Measure;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate co2:CO2_PPM_;
+        rr:objectMap [ rml:reference "CO2 (PPM)" ];
+    ].
+
+    rr:subjectMap [
+        rr:template "http://example.com/co2/_Latitude/{id}";
+        rr:class co2:_LatitudeMeasure;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate co2:_Latitude;
+        rr:objectMap [ rml:reference " Latitude" ];
+    ].
+
+    rr:subjectMap [
+        rr:template "http://example.com/co2/_Longitude/{id}";
+        rr:class co2:_LongitudeMeasure;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate co2:_Longitude;
+        rr:objectMap [ rml:reference " Longitude" ];
+    ].
+
+    rr:subjectMap [
+        rr:template "http://example.com/co2/_Altitude/{id}";
+        rr:class co2:_AltitudeMeasure;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate co2:_Altitude;
+        rr:objectMap [ rml:reference " Altitude" ];
+    ].
+
+    rr:subjectMap [
+        rr:template "http://example.com/co2/_Air_Speed_m_s_/{id}";
+        rr:class co2:_Air_Speed_m_s_Measure;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate co2:_Air_Speed_m_s_;
+        rr:objectMap [ rml:reference " Air Speed (m/s)" ];
+    ].
+
+    rr:subjectMap [
+        rr:template "http://example.com/co2/_Mode/{id}";
+        rr:class co2:_ModeMeasure;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate co2:_Mode;
+        rr:objectMap [ rml:reference " Mode" ];
+    ].
+
+    rr:subjectMap [
+        rr:template "http://example.com/co2/_Fixed_Satellites/{id}";
+        rr:class co2:_Fixed_SatellitesMeasure;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate co2:_Fixed_Satellites;
+        rr:objectMap [ rml:reference " Fixed Satellites" ];
+    ].
+
+    rr:subjectMap [
+        rr:template "http://example.com/co2/_Available_Satellites/{id}";
+        rr:class co2:_Available_SatellitesMeasure;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate co2:_Available_Satellites;
+        rr:objectMap [ rml:reference " Available Satellites" ];
+    ].
+
+    rr:subjectMap [
+        rr:template "http://example.com/co2/voltage/{id}";
+        rr:class co2:voltageMeasure;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate co2:voltage;
+        rr:objectMap [ rml:reference "voltage" ];
+    ].
+
+    rr:subjectMap [
+        rr:template "http://example.com/co2/current/{id}";
+        rr:class co2:currentMeasure;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate co2:current;
+        rr:objectMap [ rml:reference "current" ];
+    ].
+
+    rr:subjectMap [
+        rr:template "http://example.com/co2/level/{id}";
+        rr:class co2:levelMeasure;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate co2:level;
+        rr:objectMap [ rml:reference "level" ];
+    ].
+
+    rr:subjectMap [
+        rr:template "http://example.com/co2/id/{id}";
+        rr:class co2:idMeasure;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate co2:id;
+        rr:objectMap [ rml:reference "id" ];
+    ].

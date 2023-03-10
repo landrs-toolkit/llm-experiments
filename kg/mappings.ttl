@@ -1,0 +1,61 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://www.example.com/co2#> .
+
+<#TriplesMap>
+    rr:logicalTable [
+        rml:source "cleaned_CO2Meter_GPS_iso.csv";
+        rml:referenceFormulation ql:CSV;
+        rml:iterator "?row";
+        rr:tableName "CO2Meter_GPS_iso"
+    ];
+    rr:subjectMap [
+        rr:template "http://example.com/{CO2__PPM_}";
+        rr:class ex:CO2Meter_GPS_iso
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:Latitude;
+        rr:objectMap [ rr:column "Latitude"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:Longitude;
+        rr:objectMap [ rr:column "Longitude"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:Altitude;
+        rr:objectMap [ rr:column "Altitude"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:Air_Speed__m_s_;
+        rr:objectMap [ rr:column "Air_Speed__m_s_"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:Mode;
+        rr:objectMap [ rr:column "Mode"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:Fixed_Satellites;
+        rr:objectMap [ rr:column "Fixed_Satellites"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:Available_Satellites;
+        rr:objectMap [ rr:column "Available_Satellites"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:voltage;
+        rr:objectMap [ rr:column "voltage"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:current;
+        rr:objectMap [ rr:column "current"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:level;
+        rr:objectMap [ rr:column "level"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:id;
+        rr:objectMap [ rr:column "id"; ];
+    ].

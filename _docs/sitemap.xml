@@ -1,3 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://landrs-toolkit.github.io/llm-experiments/04_notes.html</loc>
+    <lastmod>2023-03-10T14:03:00.835Z</lastmod>
+  </url>
+  <url>
+    <loc>https://landrs-toolkit.github.io/llm-experiments/index.html</loc>
+    <lastmod>2023-03-10T14:03:01.134Z</lastmod>
+  </url>
+  <url>
+    <loc>https://landrs-toolkit.github.io/llm-experiments/core.html</loc>
+    <lastmod>2023-03-10T14:03:15.741Z</lastmod>
+  </url>
 </urlset>
